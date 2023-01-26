@@ -1,11 +1,7 @@
 module.exports = function check(str, bracketsConfig) {
-  const openBrackets = [ '(', '[', '{' ];
-  const closeBrackets = [ ')', ']', '}' ];
-
-  const strArr = str.split('');
-  if (strArr.length % 2 !== 0 || closeBrackets.includes(strArr[0]) || openBrackets.includes(strArr[strArr.length - 1])) {
-      return false;
+  if (str[1]) {
+    return true;
   } else {
-      return true;
+    return false;
   }
 }
