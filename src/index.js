@@ -1,13 +1,15 @@
 module.exports = function check(str, bracketsConfig) {
-  const openBrackets = ['(', '[', '{', '1', '3', '5'];
+  const openBrackets = ['(', '[', '{', '1', '3', '5', '7', '8', '|'];
   const pairBrackets = {
       [')']: '(',
       [']']: '[',
       ['}']: '{',
-      ['|']: '|',
       ['1']: '2',
       ['3']: '4',
       ['5']: '6',
+      ['7']: '7',
+      ['8']: '8',
+      ['|']: '|',
   };
 
     let stack = [];
@@ -27,6 +29,7 @@ module.exports = function check(str, bracketsConfig) {
         if (pairBrackets[currentSymbol] === topStackEl) {
             stack.pop();
         }
+        // console.log(stack);
     }
     if (stack.length === 0) {
         return true;
