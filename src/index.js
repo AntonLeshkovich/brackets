@@ -1,14 +1,14 @@
 module.exports = function check(str, bracketsConfig) {
   const openBrackets = ['(', '[', '{', '1', '3', '5'];
-    const pairBrackets = {
-        [')']: '(',
-        [']']: '[',
-        ['}']: '{',
-        ['|']: '|',
-        ['1']: '2',
-        ['3']: '4',
-        ['5']: '6',
-    };
+  const pairBrackets = {
+      [')']: '(',
+      [']']: '[',
+      ['}']: '{',
+      ['|']: '|',
+      ['1']: '2',
+      ['3']: '4',
+      ['5']: '6',
+  };
 
     let stack = [];
     
@@ -30,5 +30,7 @@ module.exports = function check(str, bracketsConfig) {
     }
     if (stack.length === 0) {
         return true;
+    } else {
+        return false;
     }
 }
